@@ -1,0 +1,5 @@
+Python 3.7 or higher
+Flask
+google-generativeai
+python-dotenv (optional)
+Valid Gemini API key

@@ -1,0 +1,35 @@
+# Define the tree structure
+tree = [
+    {
+        "nodeId": "node1",
+        "rootNode": True,
+        "prompt": "Ask if the user is John",
+        "edges": [
+            {"condition": "user is John", "targetNodeId": "node2"},
+            {"condition": "user is not John", "targetNodeId": "node3"}
+        ]
+    },
+    {
+        "nodeId": "node2",
+        "prompt": "Introduce yourself & ask if we can conduct the interview right now",
+        "edges": [
+            {"condition": "user is ready to start the interview", "targetNodeId": "node4"},
+            {"condition": "User is not ready to start the interview", "targetNodeId": "node5"}
+        ]
+    },
+    {
+        "nodeId": "node3",
+        "prompt": "Apologise to the user",
+        "edges": []
+    },
+    {
+        "nodeId": "node4",
+        "prompt": "Start interview process by asking question 1: 'What are closures in Javascript?'",
+        "edges": []
+    },
+    {
+        "nodeId": "node5",
+        "prompt": "Apologise to the user & ask if you can end the call",
+        "edges": []
+    }
+]
